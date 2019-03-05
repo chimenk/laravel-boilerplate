@@ -18,9 +18,9 @@
     <!-- navbar right -->
     <ul class="navbar-nav navbar-right">
       <!-- navbar notification toggle -->
-      <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+      {{-- <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a> --}}
         <!-- navbar notification dropdown -->
-        <div class="dropdown-menu dropdown-list dropdown-menu-right">
+        {{-- <div class="dropdown-menu dropdown-list dropdown-menu-right">
           <div class="dropdown-header">Notifications
             <div class="float-right">
               <a href="#">View All</a>
@@ -40,14 +40,14 @@
             ..
           </div>
         </div>
-      </li>
+      </li> --}}
       <!-- navbar right item -->
       <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
         <img alt="image" src="{{ asset('assets/img/avatar/avatar-1.png') }}" width="30" class="rounded-circle mr-1">
-        <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
+        <div class="d-sm-none d-lg-inline-block">Hi, {{ Auth::user()->name }}</div></a>
         <div class="dropdown-menu dropdown-menu-right">
           <div class="dropdown-title">Logged in 5 min ago</div>
-          <a href="features-profile.html" class="dropdown-item has-icon">
+          <a href="{{ route('profile') }}" class="dropdown-item has-icon">
             <i class="far fa-user"></i> Profile
           </a>
           <a href="features-activities.html" class="dropdown-item has-icon">
@@ -89,7 +89,7 @@
                     <ul class="navbar-nav ml-auto">
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                     <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

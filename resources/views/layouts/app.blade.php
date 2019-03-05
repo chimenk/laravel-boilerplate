@@ -26,7 +26,7 @@
 </head>
 <body>
     <div id="app">
-        <div class="main-wrapper main wrapper-1">
+        <div class="main-wrapper main-wrapper-1">
         @guest
         <section class="section">
             @yield('content')
