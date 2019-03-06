@@ -17,5 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/profile', 'UserController@profile')->name('profile');
+Route::middleware('auth')->group(function() {
+	Route::get('/home', 'HomeController@index')->name('home');
+	Route::get('/profile', 'UserController@profile')->name('profile');
+	Route::put('/profile/{id}', 'UserController@update')->name('profile.update');
+});
