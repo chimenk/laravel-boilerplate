@@ -27,7 +27,7 @@ class StoreProfile extends FormRequest
         return [
             'name' => 'required',
             'email' => 'required',
-            'password' => 'nullable|required_with:confirm_password|string|confirmed',
+            'password' => 'nullable|string|confirmed',
             'current_password' => 'nullable'
         ];
     }

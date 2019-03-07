@@ -83,7 +83,7 @@
   						</div>
   						<div class="form-group col-md-6 col-12">
   							<label>Confirm New Password</label>
-  							<input type="password" name="confirm_password" class="form-control">
+  							<input type="password" name="password_confirmation" class="form-control">
   							<div class="invalid-feedback">
   								Please fill in the password in correct format
   							</div>

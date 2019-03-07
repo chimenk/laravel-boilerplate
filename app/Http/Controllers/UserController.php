@@ -11,7 +11,7 @@ class UserController extends Controller
 {
 	public function update(StoreProfile $req, User $user)
 	{
-		if ($req->get('password') == '') {
+		if ($req->get('password') == null) {
 		    $user->update($req->except('password'));
 		} else {
 		    $user->update($req->all());

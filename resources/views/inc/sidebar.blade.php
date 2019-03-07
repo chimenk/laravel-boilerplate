@@ -7,7 +7,7 @@
       <a href="index.html">St</a>
     </div>
     <ul class="sidebar-menu">
-      <li><a href="{{ route('home') }}" class="nav-link"><i class="far fa-square"></i> Dashboard</a></li>
+      <li><a href="{{ route('home') }}" class="nav-link"><i class="far fa-square"></i> <span>Dashboard</span></a></li>
     </ul>
     <div class="p-3 mt-4 mb-4 hide-sidebar-mini">
       <a href="documentation.html" class="btn btn-primary btn-lg btn-icon-split btn-block">
