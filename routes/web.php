@@ -21,4 +21,5 @@ Route::middleware('auth')->group(function() {
 	Route::get('/home', 'HomeController@index')->name('home');
 	Route::get('/profile', 'UserController@profile')->name('profile');
 	Route::put('/profile/{user}', 'UserController@update')->name('profile.update');
+	Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 });
