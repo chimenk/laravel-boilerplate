@@ -9,6 +9,12 @@ use App\Http\Requests\StoreProfile;
 
 class UserController extends Controller
 {
+	public function index()
+	{
+		$user = User::all();
+		return view('user.index', compact('user'));
+	}
+
 	public function update(StoreProfile $req, User $user)
 	{
 		if ($req->get('password') == null) {
